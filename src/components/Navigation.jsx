@@ -12,12 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
-interface NavigationProps {
-  activeTab: string;
-  onTabChange: (tab: string) => void;
-}
-
-const Navigation = ({ activeTab, onTabChange }: NavigationProps) => {
+const Navigation = ({ activeTab, onTabChange }) => {
   const mainNavItems = [
     { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
     { id: "roadmap", label: "Roadmap", icon: BookOpen },
@@ -32,7 +27,7 @@ const Navigation = ({ activeTab, onTabChange }: NavigationProps) => {
     { id: "settings", label: "Settings", icon: Settings },
   ];
 
-  const NavItem = ({ item, isActive }: { item: any; isActive: boolean }) => (
+  const NavItem = ({ item, isActive }) => (
     <Button
       variant={isActive ? "default" : "ghost"}
       className={`w-full justify-start h-11 ${
